@@ -9,7 +9,7 @@
             <a class="navbar-brand" href="{{url('dashboard')}}">Home<span class="sr-only">(current)</span></a>
           </li>
       <li class="nav-item">
-        <a class="navbar-brand" href="#">Blogs</a>
+        <a class="navbar-brand" href="{{url('posts')}}">Blogs</a>
       </li>
       <li class="nav-item">
         <a class="navbar-brand" href="{{url('create_blog')}}">Create Blog</a>
