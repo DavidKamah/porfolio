@@ -76,3 +76,40 @@
 .navbar-brand{
   padding-right: var(--mb-6);
 }
+.contain{
+
+  padding-top: 40px;
+  width: 700px !important;
+
+}
+
+.form-control{
+    border-radius: 0% !important;
+
+}
+@media screen and (max-width: 567px){
+
+  .contain{
+    width: 350px!important;
+  }
+}
+.footer{
+  background-color: var(--second-color);
+  color: #fff;
+  text-align: center;
+  font-weight: var(--font-semi);
+  padding: 2rem 0;
+  margin-top: var(--mb-6);
+}
+.footer__title{
+  font-size: 2rem;
+  margin-bottom: var(--mb-4);
+}
+.footer__social{
+  margin-bottom: var(--mb-4);
+}
+.footer__icon{
+  font-size: 1.5rem;
+  color: #fff;
+  margin: 0 var(--mb-2)
+}

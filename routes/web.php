@@ -14,9 +14,13 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/**Authetication controllers */
 Route::get('login', 'AuthController@index');
 Route::post('post-login', 'AuthController@postLogin'); 
 Route::get('register', 'AuthController@register');
 Route::post('post-register', 'AuthController@postRegister'); 
 Route::get('dashboard', 'AuthController@dashboard'); 
 Route::get('logout', 'AuthController@logout');
+
+/**Routes for UserControllers*/
+Route::get('create_blog', 'UserController@create_blog');

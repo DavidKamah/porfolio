@@ -1,9 +1,9 @@
 @extends('layout.master')
 
 @section('content')
-<div class="container">
+<div class="container contain" >
   <div class="row justify-content-center">
-    <div class="card-body">
+    <div class="card-body bg-white" >
       <form action="{{url('post-login')}}" method="POST" id="logForm">
             {{ csrf_field() }}
         <div class="form-group">
@@ -13,12 +13,12 @@
               <span class="error">{{ $errors->first('email') }}</span>
                         @endif 
         </div>
-        <div class="form-group">
+        <div class="form-group" >
         <label class="small mb-1" for="inputPassword">Password</label>
             <input class="form-control py-4" id="inputPassword" type="password" name="password" placeholder="Enter password" />
                   @if ($errors->has('password'))
               <span class="error">{{ $errors->first('password') }}</span>
-                        @endif
+                  @endif
         </div>
         <div class="form-group">
           <div class="custom-control custom-checkbox">

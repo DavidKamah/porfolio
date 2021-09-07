@@ -18,7 +18,7 @@
    
     <title>My blog site</title>
   </head>
-  <body>
+  <body class = "bg-light">
    {{View::make('layout.header')}}
     @yield('content')
 
