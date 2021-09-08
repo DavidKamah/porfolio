@@ -28,6 +28,8 @@ class PostsController extends Controller
     public function create()
     {
         //
+
+        return view('createblog');
     }
 
     /**
@@ -39,6 +41,21 @@ class PostsController extends Controller
     public function store(Request $request)
     {
         //
+
+        $this->validate($request,[
+            'title'=>'required',
+            'body'=>'required'
+
+        ]);
+
+        $post = new Post;
+        $post->title = $request->input('title');
+        $post->body =$request->input('body');
+
+        $post->save();
+
+        return redirect('/posts');
+
     }
 
     /**
@@ -50,6 +67,10 @@ class PostsController extends Controller
     public function show($id)
     {
         //
+
+        $post =  Post::find($id);
+
+        return view('show')->with('post', $post);
     }
 
     /**

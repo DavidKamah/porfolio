@@ -12,7 +12,7 @@
         <a class="navbar-brand" href="{{url('posts')}}">Blogs</a>
       </li>
       <li class="nav-item">
-        <a class="navbar-brand" href="{{url('create_blog')}}">Create Blog</a>
+        <a class="navbar-brand" href="{{url('posts/create')}}">Create Blog</a>
       </li>
       <li class="nav-item">
         <a class="navbar-brand" href="{{url('logout')}}">logout</a>

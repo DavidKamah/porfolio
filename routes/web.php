@@ -23,7 +23,7 @@ Route::get('dashboard', 'AuthController@dashboard');
 Route::get('logout', 'AuthController@logout');
 
 /**Routes for UserControllers*/
-Route::get('create_blog', 'UserController@create_blog');
+
 
 /**Route for posts */
 
