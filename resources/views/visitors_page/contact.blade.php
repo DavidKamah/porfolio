@@ -1,14 +1,14 @@
-@extends('layout.adminmaster')
+@extends('visitors_page.master')
 
 @section('content')
-    <div class="container">
+<div class="container">
 
-        <h3>Create Post</h3>
-        {!! Form::open(['action' => 'PostsController@store', 'method' =>'Post']) !!}
- 
+    <h3>Create Post</h3>
+        {!! Form::open(['action' => 'PagesController@store','method'=>'Post']) !!}
+
             <div class="form-group">
-                {{Form::label('title', 'Title')}}
-                {{Form::text('title','',['class' =>'form-control','placeholder' => 'Title'])}}
+                {{Form::label('email', 'Email')}}
+                {{Form::text('email','',['class' =>'form-control','placeholder' => 'Email'])}}
             </div>
             <div class="form-group">
                 {{Form::label('body', 'Body')}}
@@ -16,8 +16,7 @@
             </div>
                 {{Form::submit('Submit', ['class' => 'btn btn-primary'])}}
         {!! Form::close() !!}
-                
-    </div>
-
+            
+</div>
 
 @endsection

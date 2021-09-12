@@ -14,6 +14,14 @@
 Route::get('/', function () {
     return view('welcome');
 });
+/**ROUTES FOR THE MAIN PAGES */
+Route::get('home', 'PagesController@home');
+Route::get('contact', 'PagesController@contact');
+Route::get('blogs', 'PagesController@blogs');
+Route::post('create', 'PagesController@store');
+Route::get('about', 'PagesController@about');
+
+
 /**Authetication controllers */
 Route::get('login', 'AuthController@index');
 Route::post('post-login', 'AuthController@postLogin'); 

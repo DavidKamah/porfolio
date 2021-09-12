@@ -13,7 +13,7 @@ class AuthController extends Controller
 {
     //
     public function index(){
-        return view('login');
+        return view('visitors_page.login');
     }
 
     public function register(){
@@ -45,11 +45,15 @@ class AuthController extends Controller
     {
  
       if(Auth::check()){
-        return view('dashboard');
+        return view('admin.dashboard');
       }
        return Redirect::to("login")->withSuccess('Opps! You do not have access');
       
     }
+    public function portfolio(){
+      return view('visitors_page.portfolio');
+  }
+
     public function postLogin(Request $request)
     {
         request()->validate([
@@ -60,7 +64,7 @@ class AuthController extends Controller
         $credentials = $request->only('email', 'password');
         if (Auth::attempt($credentials)) {
             // Authentication passed...
-            return redirect()->intended('dashboard');
+            return redirect()->intended('admin.dashboard');
         }
         return Redirect::to("login")->withSuccess('Oppes! You have entered invalid credentials');
     }

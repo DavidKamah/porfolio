@@ -16,7 +16,7 @@ class PostsController extends Controller
         //
           $posts = Post::all();
 
-        return view('index')->with('posts',$posts);
+        return view('admin.index')->with('posts',$posts);
 
     }
 
@@ -29,7 +29,7 @@ class PostsController extends Controller
     {
         //
 
-        return view('createblog');
+        return view('admin.createblog');
     }
 
     /**
@@ -70,9 +70,9 @@ class PostsController extends Controller
 
         $post =  Post::find($id);
 
-        return view('show')->with('post', $post);
+        return view('admin.show')->with('post', $post);
     }
-
+    
     /**
      * Show the form for editing the specified resource.
      *

@@ -93,8 +93,9 @@
                     <a href="https://forge.laravel.com">Forge</a>
                     <a href="https://vapor.laravel.com">Vapor</a>
                     <a href="https://github.com/laravel/laravel">GitHub</a>
-                    <a href="/login">Login</a>
-                    <a href="/register">Register</a>
+                    <a href="/home">Home</a>
+                    <!--<a href="/login">Login</a>
+                    <a href="/register">Register</a>-->
 
                 </div>
             </div>
